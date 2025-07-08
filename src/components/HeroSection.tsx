@@ -44,20 +44,6 @@ export function HeroSection() {
             <p className="text-large text-muted-foreground max-w-3xl mx-auto font-light">
               ML | AI | Business Intelligence | Agentic AI | Data Analytics
             </p>
-            
-            <div className="flex flex-wrap gap-3 justify-center">
-              {["ML", "AI", "BI", "Agentic AI", "Analytics"].map((tag, index) => (
-                <motion.span
-                  key={tag}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="px-4 py-2 glass neon-border text-sm font-medium rounded-full"
-                >
-                  {tag}
-                </motion.span>
-              ))}
-            </div>
           </motion.div>
           
           <motion.div
