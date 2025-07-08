@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import { MotionGraphics } from "./MotionGraphics";
 
 export function HeroSection() {
   const scrollToAbout = () => {
@@ -11,21 +10,18 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Motion Graphics Background */}
-      <MotionGraphics />
-      
-      {/* Static Background */}
-      <div className="absolute inset-0 z-1">
+      {/* Background */}
+      <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Hero background" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
       </div>
       
       {/* Animated gradient overlay */}
-      <div className="absolute inset-0 z-2 bg-gradient-neon opacity-5 animate-float" />
+      <div className="absolute inset-0 bg-gradient-neon opacity-10 animate-float" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
