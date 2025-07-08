@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge";
 const skills = ["ML", "AI", "BI", "Agentic AI", "Analytics"];
 
 const timeline = [
-  { year: "2024", event: "AI/ML Innovation Focus" },
-  { year: "2023", event: "Business Intelligence Leadership" },
-  { year: "2022", event: "Data Analytics Expertise" },
-  { year: "2021", event: "Entrepreneurial Journey Begins" }
+  { event: "AI/ML Innovation Focus" },
+  { event: "Business Intelligence Leadership" },
+  { event: "Data Analytics Expertise" },
+  { event: "Entrepreneurial Journey" }
 ];
 
 export function AboutSection() {
@@ -84,7 +84,7 @@ export function AboutSection() {
               <div className="space-y-6">
                 {timeline.map((item, index) => (
                   <motion.div
-                    key={item.year}
+                    key={item.event}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
@@ -95,9 +95,6 @@ export function AboutSection() {
                       <div className="w-3 h-3 bg-neon-blue rounded-full group-hover:shadow-neon transition-all duration-300" />
                     </div>
                     <div className="flex-grow border-l border-border pl-4 pb-4 last:border-l-0 last:pb-0">
-                      <div className="font-mono text-sm text-neon-blue font-medium">
-                        {item.year}
-                      </div>
                       <div className="text-muted-foreground">
                         {item.event}
                       </div>
