@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import neuralBg from "@/assets/neural-bg.jpg";
 import { Navigation } from "./Navigation";
 
 interface HeroSectionProps {
@@ -14,15 +15,17 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
-          alt="Hero background" 
+          src={neuralBg} 
+          alt="Neural network background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/80" />
       </div>
       
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-neon opacity-10 animate-float" />
+      {/* Animated neural network overlay */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="neural-animation"></div>
+      </div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -32,23 +35,12 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h1 className="heading-xl font-heading text-foreground">
-            Vinesh Reddy Karra
-          </h1>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Explore Vinesh AI</h2>
-              <p className="text-large text-muted-foreground max-w-3xl mx-auto font-light">
-                ML | AI | Business Intelligence | Agentic AI | Data Analytics
-              </p>
-            </div>
-          </motion.div>
+          {/* Vinesh AI Logo */}
+          <div className="vinesh-ai-logo">
+            <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-blue bg-clip-text text-transparent">
+              Vinesh AI
+            </span>
+          </div>
           
           <Navigation onNavigate={onNavigate} activeSection={activeSection} />
         </motion.div>
