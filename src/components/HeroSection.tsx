@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { Navigation } from "./Navigation";
 
-export function HeroSection() {
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  };
+interface HeroSectionProps {
+  onNavigate: (section: string) => void;
+  activeSection: string;
+}
+
+export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -41,25 +42,15 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <p className="text-large text-muted-foreground max-w-3xl mx-auto font-light">
-              ML | AI | Business Intelligence | Agentic AI | Data Analytics
-            </p>
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Explore Vinesh AI</h2>
+              <p className="text-large text-muted-foreground max-w-3xl mx-auto font-light">
+                ML | AI | Business Intelligence | Agentic AI | Data Analytics
+              </p>
+            </div>
           </motion.div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Button 
-              onClick={scrollToAbout}
-              size="lg"
-              className="group bg-gradient-neon text-white hover:shadow-neon transition-all duration-300 px-8 py-6 text-lg"
-            >
-              Explore My Work
-              <ChevronDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-            </Button>
-          </motion.div>
+          <Navigation onNavigate={onNavigate} activeSection={activeSection} />
         </motion.div>
       </div>
       

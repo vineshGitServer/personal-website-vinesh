@@ -41,7 +41,7 @@ export function IdeasSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg mb-6">Ideas & Essays</h2>
+          <h2 className="heading-lg mb-6">Ideas & Work</h2>
           <div className="w-24 h-1 bg-gradient-neon mx-auto rounded-full" />
           <p className="text-large text-muted-foreground mt-6 max-w-2xl mx-auto">
             Thoughts on the intersection of technology, business, and the future of intelligence.
