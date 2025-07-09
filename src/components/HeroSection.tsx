@@ -37,7 +37,7 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
         >
           {/* Vinesh AI Logo */}
           <div className="vinesh-ai-logo">
-            <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-neon-purple via-neon-cyan to-neon-blue bg-clip-text text-transparent">
+            <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-red-500 via-pink-300 to-blue-500 bg-clip-text text-transparent font-logo">
               Vinesh AI
             </span>
           </div>

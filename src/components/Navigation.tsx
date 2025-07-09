@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const navigationItems = [
-  { label: "Portfolio", id: "portfolio", subtitle: "Vinesh Reddy Karra" },
+  { label: "Profile", id: "profile" },
   { label: "Technology", id: "technology" },
   { label: "Business", id: "business" },
   { label: "Research", id: "research" },
@@ -35,17 +35,14 @@ export function Navigation({ onNavigate, activeSection }: NavigationProps) {
             onClick={() => onNavigate(item.id)}
             variant={activeSection === item.id ? "default" : "outline"}
             className={`
-              px-6 py-3 text-sm font-medium transition-all duration-300 flex flex-col items-center
+              px-6 py-3 text-sm font-medium transition-all duration-300
               ${activeSection === item.id 
                 ? "bg-gradient-neon text-white shadow-neon" 
                 : "neon-border hover-glow bg-background/50 backdrop-blur-sm hover:bg-background/80"
               }
             `}
           >
-            <span>{item.label}</span>
-            {item.subtitle && (
-              <span className="text-xs opacity-70 mt-1">{item.subtitle}</span>
-            )}
+            {item.label}
           </Button>
         </motion.div>
       ))}

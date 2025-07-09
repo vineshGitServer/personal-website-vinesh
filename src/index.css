@@ -64,6 +64,7 @@ All colors MUST be HSL.
     --font-heading: "Inter", system-ui, sans-serif;
     --font-body: "Inter", system-ui, sans-serif;
     --font-mono: "JetBrains Mono", monospace;
+    --font-logo: "Google Sans Flex", "Google Sans", "Helvetica Neue", sans-serif;
     
     /* Spacing & Layout */
     --radius: 0.75rem;

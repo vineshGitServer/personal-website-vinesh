@@ -76,7 +76,8 @@ export default {
 			fontFamily: {
 				heading: 'var(--font-heading)',
 				body: 'var(--font-body)',
-				mono: 'var(--font-mono)'
+				mono: 'var(--font-mono)',
+				logo: 'var(--font-logo)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState("portfolio");
+  const [activeSection, setActiveSection] = useState("profile");
 
   const handleNavigate = (section: string) => {
     setActiveSection(section);
@@ -21,14 +21,8 @@ const Index = () => {
 
   const renderContent = () => {
     switch (activeSection) {
-      case "portfolio":
-        return (
-          <>
-            <AboutSection />
-            <IdeasSection />
-            <ProjectsSection />
-          </>
-        );
+      case "profile":
+        return <AboutSection />;
       case "technology":
         return <CompaniesSection />;
       case "business":
@@ -68,13 +62,7 @@ const Index = () => {
           </section>
         );
       default:
-        return (
-          <>
-            <AboutSection />
-            <IdeasSection />
-            <ProjectsSection />
-          </>
-        );
+        return <AboutSection />;
     }
   };
 
