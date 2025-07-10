@@ -54,7 +54,7 @@ export function TechnologySection({ onNavigate }: TechnologySectionProps) {
       }}
     >
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       
       <div className="container-wide mx-auto px-4 relative z-10">
         <motion.div

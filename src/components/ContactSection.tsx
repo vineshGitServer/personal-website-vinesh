@@ -109,6 +109,7 @@ export function ContactSection() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
+                    <p className="text-xs text-muted-foreground">Contact</p>
                     <Input
                       id="name"
                       name="name"
@@ -120,6 +121,7 @@ export function ContactSection() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
+                    <p className="text-xs text-muted-foreground">Organization</p>
                     <Input
                       id="email"
                       name="email"
