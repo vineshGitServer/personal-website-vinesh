@@ -76,7 +76,7 @@ const getStatusColor = (status: string) => {
 
 export function CompaniesSection() {
   return (
-    <section className="section-padding">
+    <section id="startup-business" className="section-padding">
       <div className="container-wide mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -13,7 +13,7 @@ const timeline = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="profile" className="section-padding bg-muted/30">
       <div className="container-wide mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
