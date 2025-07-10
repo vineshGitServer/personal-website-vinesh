@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const navigationItems = [
   { label: "Profile", id: "profile" },
+  { label: "Startup & Business", id: "startup-business" },
   { label: "Technology", id: "technology" },
-  { label: "Business", id: "business" },
   { label: "Research", id: "research" },
   { label: "Services", id: "services" },
   { label: "Life", id: "life" }

@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { IdeasSection } from "@/components/IdeasSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { CompaniesSection } from "@/components/CompaniesSection";
+import { TechnologySection } from "@/components/TechnologySection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -23,8 +24,10 @@ const Index = () => {
     switch (activeSection) {
       case "profile":
         return <AboutSection />;
-      case "technology":
+      case "startup-business":
         return <CompaniesSection />;
+      case "technology":
+        return <TechnologySection onNavigate={handleNavigate} />;
       case "business":
         return (
           <section id="business" className="section-padding">
