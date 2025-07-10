@@ -85,7 +85,7 @@ export function CompaniesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg mb-6">Companies I've Built</h2>
+          <h2 className="heading-lg mb-6">Companies Built</h2>
           <div className="w-24 h-1 bg-gradient-neon mx-auto rounded-full" />
           <p className="text-large text-muted-foreground mt-6 max-w-2xl mx-auto">
             Entrepreneurial ventures exploring the frontiers of AI, ML, and intelligent systems.
