@@ -20,59 +20,31 @@ const Index = () => {
     }
   };
 
-  const renderContent = () => {
-    switch (activeSection) {
-      case "profile":
-        return <AboutSection />;
-      case "startup-business":
-        return <CompaniesSection />;
-      case "technology":
-        return <TechnologySection onNavigate={handleNavigate} />;
-      case "business":
-        return (
-          <section id="business" className="section-padding">
-            <div className="container-wide mx-auto px-4 text-center">
-              <h2 className="heading-lg mb-6">Business</h2>
-              <p className="text-large text-muted-foreground">Business insights and strategies coming soon.</p>
-            </div>
-          </section>
-        );
-      case "research":
-        return (
-          <section id="research" className="section-padding">
-            <div className="container-wide mx-auto px-4 text-center">
-              <h2 className="heading-lg mb-6">Research</h2>
-              <p className="text-large text-muted-foreground">Research publications and findings coming soon.</p>
-            </div>
-          </section>
-        );
-      case "services":
-        return (
-          <section id="services" className="section-padding">
-            <div className="container-wide mx-auto px-4 text-center">
-              <h2 className="heading-lg mb-6">Services</h2>
-              <p className="text-large text-muted-foreground">Professional services and consulting coming soon.</p>
-            </div>
-          </section>
-        );
-      case "life":
-        return (
-          <section id="life" className="section-padding">
-            <div className="container-wide mx-auto px-4 text-center">
-              <h2 className="heading-lg mb-6">Life</h2>
-              <p className="text-large text-muted-foreground">Personal insights and experiences coming soon.</p>
-            </div>
-          </section>
-        );
-      default:
-        return <AboutSection />;
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
       <HeroSection onNavigate={handleNavigate} activeSection={activeSection} />
-      {renderContent()}
+      <AboutSection />
+      <CompaniesSection />
+      <TechnologySection onNavigate={handleNavigate} />
+      <section id="research" className="section-padding">
+        <div className="container-wide mx-auto px-4 text-center">
+          <h2 className="heading-lg mb-6">Research</h2>
+          <p className="text-large text-muted-foreground">Research publications and findings coming soon.</p>
+        </div>
+      </section>
+      <section id="services" className="section-padding">
+        <div className="container-wide mx-auto px-4 text-center">
+          <h2 className="heading-lg mb-6">Services</h2>
+          <p className="text-large text-muted-foreground">Professional services and consulting coming soon.</p>
+        </div>
+      </section>
+      <section id="life" className="section-padding">
+        <div className="container-wide mx-auto px-4 text-center">
+          <h2 className="heading-lg mb-6">Life</h2>
+          <p className="text-large text-muted-foreground">Personal insights and experiences coming soon.</p>
+        </div>
+      </section>
       <ContactSection />
       <Footer />
     </div>
