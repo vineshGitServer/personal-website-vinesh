@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, Brain, Atom, Lock, Zap, Radio } from "lucide-react";
+import { Cpu, Brain, Atom, Lock, Zap, Radio, Dna, Leaf } from "lucide-react";
 import robotTechBg from "@/assets/robot-tech-bg.jpg";
 
 const technologyItems = [
@@ -40,6 +40,18 @@ const technologyItems = [
     id: "iot-sensors",
     icon: Radio,
     description: "Internet of Things devices and sensor networks"
+  },
+  { 
+    label: "Bio-Technology", 
+    id: "bio-technology",
+    icon: Dna,
+    description: "Biotechnology research and applications"
+  },
+  { 
+    label: "Sustainability", 
+    id: "sustainability",
+    icon: Leaf,
+    description: "Sustainable technology and green solutions"
   }
 ];
 
