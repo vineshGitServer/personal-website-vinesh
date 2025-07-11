@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, Brain, Atom, Lock, Zap } from "lucide-react";
+import { Cpu, Brain, Atom, Lock, Zap, Radio } from "lucide-react";
 import robotTechBg from "@/assets/robot-tech-bg.jpg";
 
 const technologyItems = [
@@ -34,6 +34,12 @@ const technologyItems = [
     id: "cryptography",
     icon: Lock,
     description: "Advanced encryption and security protocols"
+  },
+  { 
+    label: "IoT and Sensors", 
+    id: "iot-sensors",
+    icon: Radio,
+    description: "Internet of Things devices and sensor networks"
   }
 ];
 
