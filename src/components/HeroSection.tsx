@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import neuralBg from "@/assets/neural-bg.jpg";
 import { Navigation } from "./Navigation";
+import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
@@ -12,6 +13,19 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Membership Button - Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <Button variant="outline" className="neon-border hover-glow bg-background/50 backdrop-blur-sm hover:bg-background/80">
+            Membership
+          </Button>
+        </motion.div>
+      </div>
+
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img 
