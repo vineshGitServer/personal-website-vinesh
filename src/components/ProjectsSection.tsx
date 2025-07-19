@@ -3,8 +3,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
+  {
+    name: "Ferrus Engine",
+    description: "Cutting-edge AI infrastructure platform providing intelligent agents, agentic AI systems, and semi-humanoid robotic platforms for modern enterprises.",
+    role: "Founder & Technical Lead",
+    stack: ["AI Infrastructure", "Robotics", "Data Centers", "Automation"],
+    year: "2024",
+    type: "AI/Robotics Platform",
+    hasVisitPage: true
+  },
   {
     name: "Intelligent Data Pipeline",
     description: "Automated ML pipeline for real-time data processing and insights generation using advanced algorithms.",
@@ -40,6 +50,7 @@ const projects = [
 ];
 
 export function ProjectsSection() {
+  const navigate = useNavigate();
   return (
     <section className="section-padding bg-muted/30">
       <div className="container-wide mx-auto px-4">
@@ -112,14 +123,26 @@ export function ProjectsSection() {
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="neon-border hover-glow"
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </Button>
+                    {project.hasVisitPage ? (
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="neon-border hover-glow"
+                        onClick={() => navigate("/ferrus-engine")}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Visit
+                      </Button>
+                    ) : (
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="neon-border hover-glow"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Demo
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
