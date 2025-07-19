@@ -123,16 +123,19 @@ export function ProjectsSection() {
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </Button>
-                    {project.hasVisitPage ? (
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        className="neon-border hover-glow"
-                        onClick={() => navigate("/ferrus-engine")}
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Visit
-                      </Button>
+                     {project.hasVisitPage ? (
+                       <Button 
+                         variant="outline" 
+                         size="sm"
+                         className="neon-border hover-glow"
+                         onClick={() => {
+                           console.log("Navigating to /ferrus-engine");
+                           navigate("/ferrus-engine");
+                         }}
+                       >
+                         <ExternalLink className="h-4 w-4 mr-2" />
+                         Visit
+                       </Button>
                     ) : (
                       <Button 
                         variant="outline" 
