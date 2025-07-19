@@ -23,7 +23,19 @@ export function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="heading-lg mb-6">About</h2>
-          <div className="w-24 h-1 bg-gradient-neon mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-neon mx-auto rounded-full mb-12" />
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
+              Hello, Welcome to Vinesh-AI. Here you get exposed to a domain of Technologies and Advanced tools.
+            </h3>
+          </motion.div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
