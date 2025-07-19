@@ -27,6 +27,7 @@ const Index = () => {
       <AboutSection />
       <CompaniesSection />
       <TechnologySection onNavigate={handleNavigate} />
+      <ProjectsSection />
       <section id="research" className="section-padding">
         <div className="container-wide mx-auto px-4 text-center">
           <h2 className="heading-lg mb-6">Research</h2>
