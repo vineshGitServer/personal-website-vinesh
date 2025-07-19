@@ -32,7 +32,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
               Hello, Welcome to Vinesh-AI. Here you get exposed to a domain of Technologies and Advanced tools.
             </h3>
           </motion.div>
