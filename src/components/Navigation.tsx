@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const navigationItems = [
   { label: "Profile", id: "profile" },
@@ -17,6 +18,16 @@ interface NavigationProps {
 }
 
 export function Navigation({ onNavigate, activeSection }: NavigationProps) {
+  const navigate = useNavigate();
+
+  const handleNavigation = (itemId: string) => {
+    if (itemId === "services") {
+      navigate("/services");
+    } else {
+      onNavigate(itemId);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -32,7 +43,7 @@ export function Navigation({ onNavigate, activeSection }: NavigationProps) {
           transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
         >
           <Button
-            onClick={() => onNavigate(item.id)}
+            onClick={() => handleNavigation(item.id)}
             variant={activeSection === item.id ? "default" : "outline"}
             className={`
               px-6 py-3 text-sm font-medium transition-all duration-300

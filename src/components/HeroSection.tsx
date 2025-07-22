@@ -13,12 +13,21 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Membership Button - Top Right */}
-      <div className="absolute top-6 right-6 z-20">
+      {/* Membership and Substack Buttons - Top Right */}
+      <div className="absolute top-6 right-6 z-20 flex gap-4">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <Button variant="outline" className="neon-border hover-glow bg-background/50 backdrop-blur-sm hover:bg-background/80">
+            Substack
+          </Button>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Button variant="outline" className="neon-border hover-glow bg-background/50 backdrop-blur-sm hover:bg-background/80">
             Membership
@@ -49,10 +58,10 @@ export function HeroSection({ onNavigate, activeSection }: HeroSectionProps) {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Vinesh AI Logo */}
+          {/* Vinesh Reddy Karra Logo */}
           <div className="vinesh-ai-logo">
             <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-red-500 via-pink-300 to-blue-500 bg-clip-text text-transparent font-logo">
-              Vinesh AI
+              Vinesh Reddy Karra
             </span>
           </div>
           
